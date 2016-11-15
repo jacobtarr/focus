@@ -11,7 +11,6 @@
 
 .gform_button.button {
 	cursor: pointer;
-    @include flButton($padding: 17px 35px, $border: 0, $background: #535353);
     &:hover, &:focus {
         color: #fff;
         background: darken(#535353, 10%);
@@ -121,102 +120,8 @@ body .gform_wrapper label.gfield_label+div.ginput_container {
 }
 
 /* -------------------------------------
-/* Pond Assessment Form specific styles
-/* ------------------------------------- */
-
-#pondAssessmentFormBtn {
-	&[aria-expanded="true"] {
-		@include sr-only();
-	}
-}
-
-/* -------------------------------------
 /* Contact Form specific styles (appears 
 /* everywhere)
 /* ------------------------------------- */
-
-$contact-form-max-width: 1140px;
-$contact-form-btn-trigger-height: 71px;
-
-.btn-fl--contact {
-	font-size: 30px;
-	@include transform(rotate(270deg));
-	position: fixed;
-    margin: 0;
-    right: -90px;
-    top: 480px;
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: $contact-form-btn-trigger-height;
-    margin: 0;
-    height: $contact-form-btn-trigger-height;
-    z-index: 200;
-
-}
-
-.contact-form-container {
-	position: fixed;
-	top: 0;
-    margin: 0;
-    z-index: 200;
-	width: 100%;
-	height: 100%;
-	max-width: $contact-form-max-width;
-	box-sizing: border-box;
-	right: -$contact-form-max-width;
-	@include transition(all 200ms ease-in-out);
-}
-
-.contact-form {
-	background: #fff;
-	position: relative;
-	left: $contact-form-btn-trigger-height;
-	border-top: 28px solid $fl-dark-grey;
-	border-bottom: 110px solid $fl-blue;
-	padding: 50px (80px + $contact-form-btn-trigger-height) 95px 65px;
-	height: 100%;
-}
-
-.contact-form__content {
-	margin-top: 50px;
-}
-
-.contact-form__inner {
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
-.contact-form-container.form-open {
-	right: 0;
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-	overflow-y: scroll;
-	overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    .btn-fl--contact {
-    	right: ($contact-form-max-width - 90px) - $contact-form-btn-trigger-height;
-    }
-}
-
-.contact-form__city {
-	font-size: 40px;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1;
-	color: #000;
-}
-
-.contact-form__phone-number {
-	font-size: 40px;
-	font-weight: 700;
-	text-align: center;
-	display: block;
-	color: #000;
-}
-
-.adr {
-	font-weight: 700;
-	text-align: center;
-	color: #000;
-}
 
 

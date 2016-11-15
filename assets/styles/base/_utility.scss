@@ -6,7 +6,7 @@
 /* ----------------------------- */
 
 .is-flex {
-	@include display(flex);
+	display: flex;
 }
 
 .has-flex-wrap {
