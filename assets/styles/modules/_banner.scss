@@ -1,0 +1,104 @@
+/* -----------------------------
+/* Banner
+/*
+/* - Appears below the header on all
+/* pages
+/* ----------------------------- */
+
+.banner-wrapper {
+    padding: 0;
+    height: 100%;
+    max-height: 1080px;
+    margin: 0 0 24px 0;
+    .banner-img-container {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        > img {
+            display: block;
+            margin: 0 auto;
+            @include object-fit(cover);
+            max-width: 100%;
+            width: 100%;
+            height: 1080px;
+        }
+    }
+    &.secondary {
+        max-height: 529px;
+        .banner-img-container {
+            > img {
+                max-height: 529px;
+            }
+        }
+    }
+    &.blog-post {
+        .banner-img-container {
+            text-align: left;
+        }
+        .banner-content {
+            padding: 0 20px 0 80px;
+            bottom: 60px;
+        }
+    }
+}
+
+.banner-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: percentage(340/1080);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 50;
+    line-height: 1;
+}
+
+.banner-content-title {
+    color: #fff;
+    font-size: 98px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.banner-content-desc {
+    display: block;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+.banner-content-btn {
+    margin-top: 70px;
+    background: #fff;
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 1rem 2rem;
+}
+
+.banner-arrow {
+    position: absolute;
+    bottom: 50px;
+    width: 58px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 190;
+    height: 14px;
+    &:hover, &:focus {
+        img {
+            @include transform(scale(1.5));
+        }
+    }
+    img {
+        @include transition(all .2s linear);
+        vertical-align: top;
+    }
+}

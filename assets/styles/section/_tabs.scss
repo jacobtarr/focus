@@ -1,0 +1,182 @@
+/* -----------------------------
+/* Tabs
+/*
+/* - Used on the Services and 
+/* FAQ pages; can be used anywhere
+/* though
+/* ----------------------------- */
+
+.nav-tabs {
+	margin-bottom: 24px;
+	border: 0;
+}
+
+.nav-tabs .nav-link {
+	background: $fl-dark-blue;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	line-height: calc(30 / 25);
+	font-weight: 700;
+	height: 100%;
+	text-align: center;
+	padding: 14px 10px;
+	margin: 0;
+	width: 100%;
+	border: 0;
+	border-radius: 0;
+	position: relative;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	&.active {
+		color: #fff !important;
+		background-color: $fl-blue !important;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -24px;
+			left: 0;
+			width: 100%;
+			height: 24px;
+			background-color: $fl-blue;
+		}
+	}
+}
+
+.nav-tabs--faq .nav-item {
+	@include flex(0 0 20%);
+    max-width: 20%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.faq-group {
+	margin-bottom: 40px;
+	p {
+		margin-bottom: 25px;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.nav-tabs .nav-item+.nav-item {
+	margin-left: 0;
+}
+
+.nav-tabs .nav-item {
+	
+}
+
+
+.tab-pane__intro {
+	color: #fff;
+	background: $fl-blue;
+	padding: 35px 70px;
+	margin-bottom: 24px;
+}
+
+.tab-pane__tab-content {
+	background: #fff;
+	color: #000;
+	padding: 55px 100px;
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.tab-content__sections {
+	.tab-content__section:nth-of-type(odd) {
+		&::after {
+			content: '';
+		    max-width: 1120px;
+		    width: 100%;
+		    height: 1px;
+		    left: -100px;
+		    background: #000;
+		    position: absolute;
+		    bottom: -65px;
+		}
+	}
+	.tab-content__section:nth-of-type(even) {
+		&::after {
+			content: '';
+		    max-width: 1120px;
+		    width: 100%;
+		    height: 1px;
+		    right: -100px;
+		    background: #000;
+		    position: absolute;
+		    bottom: -65px;
+		}
+	}
+	.tab-content__section:last-of-type {
+		margin-bottom: 65px;
+		&::after {
+			content: none !important;
+		}
+	}
+}
+
+.tab-content__section {
+	margin-bottom: 130px;
+	position: relative;
+	> .row + .secondary-section {
+		margin-top: 30px;
+	}
+}
+
+.tab-content__btns {
+	width: 100%;
+	text-align: right;
+	margin-bottom: 50px;
+	.btn:nth-of-type(2) {
+		margin-left: 70px;
+	}
+}
+
+.img-group {
+	margin-bottom: 30px;
+	img {
+		border-radius: 50%;
+	}
+	+ .img-group {
+		margin: 0;
+	}
+}
+
+.img-group__desc {
+	font-weight: 700;
+	font-style: italic;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.img-group.secondary .img-group__desc {
+	font-weight: 500;
+	font-size: 24px;
+	color: #505050;
+	text-transform: none;
+}
+
+.tab-content__title {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: calc(40/48);
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	&.sm {
+		font-size: 38px;
+	}
+}
+
+.tab-content__subtitle {
+	margin-bottom: 30px;
+	display: block;
+	&.lg {
+		font-size: 35px;
+	}
+}

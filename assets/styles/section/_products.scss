@@ -1,0 +1,92 @@
+/* -----------------------------
+/* Products
+/*
+/* - Styles for products
+/* ----------------------------- */
+
+.products {
+	background: #fff;
+	padding: 50px;
+	height: 100%;
+	color: #000;
+}
+
+.product-row {
+	margin: 0 -25px 30px -25px;
+}
+
+.products .product-row:last-of-type {
+	margin-bottom: 0;
+}
+
+.product {
+	padding: 0 25px;
+}
+
+.product__picture {
+	display: block;
+	max-width: 256px;
+	max-height: 235px;
+	img {
+		vertical-align: top;
+		width: 100%;
+		height: 100%;
+		@include object-fit(cover);
+		border: 1px solid #95989A;
+	}
+}
+
+.product__picture + .product__title {
+	margin-top: 5px;
+}
+
+.product__title {
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: calc(32em / 20);
+	a {
+		text-decoration: none;
+		color: #000;
+		&:hover, &:focus {
+			color: $fl-blue;
+		}
+	}
+}
+
+.product__content {
+	&-inner {
+		padding: 50px;
+	}
+}
+
+.product__content + .product__related-products {
+	border-top: 1px solid #95989A;
+}
+
+.product__related-products {
+	&-inner {
+		padding: 50px;
+	}
+	.product__title {
+		margin-bottom: 30px;
+	}
+}
+
+.product__back {
+	margin-top: 20px;
+}
+
+.product__info-list {
+	margin-top: 55px;
+	li {
+		color: #000;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 30px;
+		padding: 0;
+		margin: 0 0 3px 0;
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}

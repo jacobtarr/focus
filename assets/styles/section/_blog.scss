@@ -1,0 +1,41 @@
+/* -----------------------------
+/* Blog
+/* ----------------------------- */
+
+.posts-navigation {
+	margin: 0 0 24px 0;
+	.screen-reader-text {
+		font-size: 42px;
+	}
+	.nav-links {
+		margin: 24px 0 0 0;
+		@include display(flex);
+		@include justify-content(space-between);
+	}
+}
+
+.nav-previous a {
+	text-decoration: none;
+	@include flButton($padding: 12px 35px, $background: #fff, $color: #000,
+        $border: 4px solid #000);
+    &:hover, &:focus {
+        color: #fff;
+        background: #000;
+    }
+    @include breakpoint(lg) {
+    	border: 2px solid #000;
+    }
+}
+
+.nav-next a {
+	text-decoration: none;
+	@include flButton($padding: 12px 35px, $background: #fff, $color: #000,
+        $border: 4px solid #000);
+    &:hover, &:focus {
+        color: #fff;
+        background: #000;
+    }
+    @include breakpoint(lg) {
+    	border: 2px solid #000;
+    }
+}

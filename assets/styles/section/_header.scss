@@ -1,0 +1,86 @@
+/* -----------------------------
+/* Header
+/* ----------------------------- */
+
+
+.site-logo {
+	img {
+		width: 188px;
+	}
+}
+
+.navbar {
+	padding: 0;
+}
+
+.navbar-nav {
+	background: #fff;
+}
+
+.navbar .nav-link {
+	color: #656565;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	height: 100%;
+	&:hover, &:focus {
+		background: $fl-light-grey;
+	}
+	&.active {
+		color: #656565 !important;
+		background: $fl-light-grey;
+	}
+}
+
+.navbar-brand {
+	margin: 0;
+}
+
+@media (min-width: 992px) {
+	.navbar .navbar-nav {
+		float: none;
+		vertical-align: top;
+		width: 100%;
+		@include align-items(stretch);
+		@include display(flex);
+		@include justify-content(center);
+		height: 100px;
+	}
+
+	.site-logo {
+		padding: 0 35px;
+	}
+
+	.navbar-brand {
+		@include display(flex);
+		@include align-items(flex-end);
+		min-height: 100%;
+		padding-bottom: 12px;
+	}
+
+	.navbar .nav-link {
+		min-height: 100%;
+		@include display(flex !important);
+		@include align-items(flex-end);
+		line-height: 1;
+		padding: 0 35px 28px !important;
+		margin: 0;
+	}
+
+	.navbar .collapse {
+		text-align: center;
+		height: 100% !important;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+
+	.site-logo {
+		padding: 0 35px;
+	}
+
+	.navbar .nav-link {
+		padding: 0 25px 28px !important;
+	}
+}
+
