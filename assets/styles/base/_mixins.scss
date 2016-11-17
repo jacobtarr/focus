@@ -40,12 +40,34 @@
 //
 // Button
 //
+@mixin btn-focus($color: $f-black,
+    $padding: 15px 15px,
+    $background: #fff,
+    $font-size: 14px) {
+    text-transform: uppercase;
+    font-size: $font-size;
+    color: $color;
+    padding: $padding;
+    background: $background;
+    font-weight: 700;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 0;
+    transition: all 0.2s linear;
+    &:hover, &:focus {
+
+    }
+}
+
+.btn-focus {
+    @include btn-focus();
+}
 
 
 
 //
 // This mixin can be used to set the object-fit:
-// @include object-fit(contain);
+// @include object-fit(cover);
 // or object-fit and object-position:
 // @include object-fit(cover, top);
 //

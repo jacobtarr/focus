@@ -2,4 +2,51 @@
 /* Header
 /* ----------------------------- */
 
+.header-wrapper {
+	position: relative;
+}
 
+.site-header {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 32px;
+	padding: 0 45px;
+	width: 100%;
+	max-width: 1256px;
+	margin: 0 auto;
+    right: 0;
+}
+
+.header-menu {
+
+}
+
+.navbar {
+	padding-right: 0;
+}
+
+.navbar-nav .nav-link {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+	&:hover, &:focus {
+		color: $f-orange;
+	}
+}
+
+.navbar-nav .nav-item+.nav-item {
+	margin-left: 50px;
+}
+
+.header-menu__phone {
+	text-align: right;
+	a {
+		font-size: 20px;
+		color: #fff;
+		font-weight: 700;
+		&:hover, &:focus {
+			color: $f-orange;
+		}
+	}
+}

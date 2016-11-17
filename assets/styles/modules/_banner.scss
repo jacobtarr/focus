@@ -5,73 +5,182 @@
 /* pages
 /* ----------------------------- */
 
-.banner-wrapper {
-    padding: 0;
-    height: 100%;
-    max-height: 1080px;
-    margin: 0 0 24px 0;
-    .banner-img-container {
-        display: block;
+.carousel {
+    img {
         width: 100%;
-        overflow: hidden;
-        text-align: center;
-        margin: 0 auto;
-        position: relative;
-        > img {
-            display: block;
-            margin: 0 auto;
-            @include object-fit(cover);
-            max-width: 100%;
-            width: 100%;
-            height: 1080px;
-        }
+        height: 580px !important;
+        @include object-fit(cover);
     }
-    &.secondary {
-        max-height: 529px;
-        .banner-img-container {
-            > img {
-                max-height: 529px;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-control {
+    width: 37px;
+    opacity: 1;
+    &.left {
+        left: 55px;
+        &:hover, &:focus {
+            .icon-prev:before {
+                opacity: 1;
             }
         }
     }
-    &.blog-post {
-        .banner-img-container {
-            text-align: left;
-        }
-        .banner-content {
-            padding: 0 20px 0 80px;
-            bottom: 60px;
+    &.right {
+        right: 55px;
+        &:hover, &:focus {
+            .icon-next:before {
+                opacity: 1;
+            }
         }
     }
 }
 
-.banner-content {
+.carousel-control .icon-prev:before {
+    content: '';
+    transition: all 0.2s linear;
+    opacity: 0.2;
     position: absolute;
+    width: 37px;
+    height: 64px;
     left: 0;
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="394 263.003 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M394.636 296.478l29.625 29.883a1.989 1.989 0 0 0 2.925 0l3.178-3.207a2.028 2.028 0 0 0 0-2.95l-24.984-25.203 24.984-25.2a2.028 2.028 0 0 0 0-2.95l-3.178-3.207a1.989 1.989 0 0 0-2.925 0l-29.625 29.884a2.028 2.028 0 0 0 0 2.95z"/></svg>');
+}
+
+.carousel-control .icon-next:before {
+    content: '';
+    opacity: 0.2;
+    transition: all 0.2s linear;
+    position: absolute;
+    width: 37px;
+    height: 64px;
     right: 0;
-    bottom: percentage(340/1080);
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    z-index: 50;
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="1613.004 263 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M1649.368 293.524l-29.625-29.883a1.989 1.989 0 0 0-2.925 0l-3.178 3.207a2.028 2.028 0 0 0 0 2.95l24.984 25.203-24.984 25.2a2.028 2.028 0 0 0 0 2.95l3.178 3.207a1.989 1.989 0 0 0 2.925 0l29.625-29.884a2.028 2.028 0 0 0 0-2.95z"/></svg>');
+}
+
+.carousel-indicators {
+    bottom: 25px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators li {
+    border: 1px solid #9D9D9D;
+    background: #D9D9D9;
+    opacity: 0.5;
+    margin: 0;
+    &.active {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+}
+
+.carousel-caption {
+    padding: 0;
+    bottom: 120px;
+}
+
+.carousel-caption__title {
+    font-size: 56px;
+    margin: 0 auto 70px auto;
+    max-width: 564px;
+    padding: 15px 25px;
     line-height: 1;
-}
-
-.banner-content-title {
-    color: #fff;
-    font-size: 98px;
     text-transform: uppercase;
-    font-weight: 300;
+    border: 9px solid $f-orange;
+    border: 9px solid rgba($f-orange, 0.6);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
-.banner-content-desc {
-    display: block;
-    font-weight: 500;
-    font-size: 32px;
-    margin-top: 40px;
+.carousel-caption__desc {
+    display: inline-block;
+    font-family: $times;
+    vertical-align: bottom;
+    font-size: 21px;
+    margin-right: 35px;
+    line-height: calc(25em / 21);
+    max-width: 450px;
+    text-align: right;
+    width: 100%;
 }
 
-.banner-content-btn {
+.carousel-caption__secondary-content {
+    .btn {
+        display: inline-block;
+    }
+}
+
+// .banner-wrapper {
+//     padding: 0;
+//     height: 100%;
+//     max-height: 1080px;
+//     margin: 0 0 24px 0;
+//     .banner-img-container {
+//         display: block;
+//         width: 100%;
+//         overflow: hidden;
+//         text-align: center;
+//         margin: 0 auto;
+//         position: relative;
+//         > img {
+//             display: block;
+//             margin: 0 auto;
+//             @include object-fit(cover);
+//             max-width: 100%;
+//             width: 100%;
+//             height: 1080px;
+//         }
+//     }
+//     &.secondary {
+//         max-height: 529px;
+//         .banner-img-container {
+//             > img {
+//                 max-height: 529px;
+//             }
+//         }
+//     }
+//     &.blog-post {
+//         .banner-img-container {
+//             text-align: left;
+//         }
+//         .banner-content {
+//             padding: 0 20px 0 80px;
+//             bottom: 60px;
+//         }
+//     }
+// }
+
+// .banner-content {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: percentage(340/1080);
+//     box-sizing: border-box;
+//     width: 100%;
+//     padding: 0 20px;
+//     margin: 0 auto;
+//     z-index: 50;
+//     line-height: 1;
+// }
+
+// .banner-content-title {
+//     color: #fff;
+//     font-size: 98px;
+//     text-transform: uppercase;
+//     font-weight: 300;
+// }
+
+// .banner-content-desc {
+//     display: block;
+//     font-weight: 500;
+//     font-size: 32px;
+//     margin-top: 40px;
+// }
+
+// .banner-content-btn {
     
-}
+// }

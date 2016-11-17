@@ -5,10 +5,13 @@
 // Colors
 $f-orange: #F18C25;
 $f-dark-grey: #404040;
+$f-black: #252525;
+$f-black-alt: #2b2b2b;
 
 
 // Fonts
-$ubuntu: 'Ubuntu', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$times: 'Times News Roman', serif;
 
 // Bourbon overrides
 $em-base: 18px;
@@ -122,16 +125,16 @@ $border-width: 1px !default;
 // Settings for the `<body>` element.
 
 $body-bg:    #fff !default;
-$body-color: $gray-dark !default;
+$body-color: $f-dark-grey !default;
 
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            $f-orange !default;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      darken($link-color, 10%) !default;
 $link-hover-decoration: underline !default;
 
 
@@ -157,8 +160,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 576px,
   md: 720px,
-  lg: 1060px,
-  xl: 1140px
+  lg: 992px,
+  xl: 1060px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -175,10 +178,10 @@ $grid-gutter-width: 30px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: $montserrat;
+$font-family-serif:      $montserrat;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-base:       $montserrat !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 18px !default;
@@ -208,8 +211,8 @@ $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
-$headings-font-weight:   500 !default;
+$headings-font-family:   $montserrat !default;
+$headings-font-weight:   700 !default;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 

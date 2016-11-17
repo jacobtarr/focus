@@ -17,6 +17,10 @@
 	@include flex-wrap(nowrap !important);
 }
 
+.flex-space-between {
+	@include justify-content(space-between);
+}
+
 .font-light {
 	font-weight: 100;
 }

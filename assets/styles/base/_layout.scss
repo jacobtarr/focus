@@ -3,20 +3,17 @@
 /* ----------------------------- */
 
 body {
-	font-family: $ubuntu;
-	font-size: 24px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	line-height: 1.5;
 }
 
 a {
-	color: $focus-orange;
-	@include transition(all .2s linear);
-	text-decoration: none;
+	color: $f-orange;
+	transition: all 0.2s linear;
+	text-decoration: none !important;
 	&:hover, &:focus, &:active {
 
-		@include transition(all .2s linear);
 	}
 }
 
@@ -29,7 +26,6 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
 	text-transform: uppercase;
 }
 

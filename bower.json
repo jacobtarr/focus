@@ -7,6 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4"
-  }
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4",
+    "jquery-hammerjs": "^2.0.0",
+    "object-fit-images": "*"
+  },
+  "devDependencies": {}
 }

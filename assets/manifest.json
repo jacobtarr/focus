@@ -4,6 +4,7 @@
       "files": [
         "scripts/main.js"
       ],
+      "bower": ["object-fit-images"],
       "main": true
     },
     "main.css": {

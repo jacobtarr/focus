@@ -15,18 +15,24 @@
 	// Use this variable to set up the common and page specific functions. If you
 	// rename this variable, you will also need to rename the namespace below.
 	var Sage = {
+		// Adding touch support to home carousel
+		'touchSupport': {
+			init: function() {
+				jQuery('#home-carousel').hammer().on('swipeleft', function(){
+		  			jQuery(this).carousel('next'); 
+		  		});
+		  		jQuery('#home-carousel').hammer().on('swiperight', function(){
+		  			jQuery(this).carousel('prev'); 
+		  		});
+			}
+		},
 		// All pages
 		'common': {
 			init: function() {
-				// JavaScript to be fired on all pages
-				function multiply(x,y) {
-				     return (x * y);
-				}
-				console.log(multiply(2,2));
+				objectFitImages();
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired
-
 			}
 		},
 		'foobar': {
@@ -70,6 +76,7 @@
 			// Fire common init JS
 			UTIL.fire('common');
 			UTIL.fire('foobar');
+			UTIL.fire('touchSupport');
 
 			// Fire page-specific init JS, and then finalize JS
 			$.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
