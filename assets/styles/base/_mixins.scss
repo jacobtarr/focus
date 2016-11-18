@@ -63,6 +63,14 @@
     @include btn-focus();
 }
 
+.btn-focus--orange {
+    @include btn-focus($background: $f-orange, $color: #fff);
+    &:hover, &:focus {
+        color: #fff;
+        background: darken($f-orange, 10%);
+    }
+}
+
 
 
 //

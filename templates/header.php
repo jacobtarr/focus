@@ -6,6 +6,8 @@
 		</nav>
 	</div>
 </header> -->
+<?php if ( is_home() )  { ?>
+<?php } ?>
 <div class="header-wrapper">
 	<header class="site-header">
 		<div class="is-flex flex-items-xs-between">

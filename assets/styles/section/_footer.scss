@@ -5,5 +5,48 @@
 /* globally
 /* ----------------------------- */
 
+.footer-wrapper {
+	background: url('../images/footer-bg.png') no-repeat center;
+	background-size: cover;
+}
 
+.footer-content {
+	max-width: 940px;
+	padding: 50px 0;
+	color: #fff;
+	margin: 0 auto;
+	a {
+		color: #fff;
+		&:hover, &:focus {
+			color: $f-orange;
+		}
+	}
+}
 
+.footer-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 7px;
+}
+
+.footer-phone {
+	font-size: 30px;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 23px;
+}
+
+.footer-content__col-1 {
+	margin-right: 225px;
+}
+
+.footer-content__col-2 {
+	.footer-title {
+		margin-bottom: 10px;
+	}
+	> ul:first-of-type {
+		margin-right: 65px;
+	}
+}

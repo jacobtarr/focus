@@ -36,6 +36,7 @@
 	background: $f-black-alt;
 	border-top: 17px solid $f-orange;
 	color: #fff;
+	margin-bottom: 35px;
 }
 
 .features {
@@ -88,6 +89,57 @@
 		width: 627px;
 		vertical-align: bottom;
 	}
+}
+
+.callout {
+	border: 9px solid $f-orange;
+}
+
+.callout-top {
+	padding: 32px;
+	h1 {
+		font-size: 32px;
+		color: $f-orange;
+		margin-bottom: 25px;
+	}
+}
+
+.callout-middle {
+	background: $f-black-alt;
+	color: #fff;
+	padding: 32px;
+	img {
+		margin-right: 45px;
+	}
+}
+
+.callout-middle__services {
+	h6 {
+		text-transform: none;
+		font-weight: 400;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	ul {
+		color: $f-orange;
+	}
+}
+
+.callout-bottom {
+	padding: 32px;
+	a:not(.btn) {
+		color: $f-dark-grey;
+	}
+	img {
+		width: 100%;
+	}
+	.btn-focus--orange {
+		max-width: 316px;
+	}
+}
+
+.home-desc-area {
+	margin: 40px 0;
 }
 
 
