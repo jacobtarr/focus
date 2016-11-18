@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</header>
-	<div id="home-carousel" class="home-carousel carousel slide" data-ride="">
+	<div id="home-carousel" class="home-carousel carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>

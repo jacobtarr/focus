@@ -18,12 +18,12 @@
 		// Adding touch support to home carousel
 		'touchSupport': {
 			init: function() {
-				jQuery('#home-carousel').hammer().on('swipeleft', function(){
-		  			jQuery(this).carousel('next'); 
-		  		});
-		  		jQuery('#home-carousel').hammer().on('swiperight', function(){
-		  			jQuery(this).carousel('prev'); 
-		  		});
+				// jQuery('#home-carousel').hammer().on('swipeleft', function(){
+		  // 			jQuery(this).carousel('next'); 
+		  // 		});
+		  // 		jQuery('#home-carousel').hammer().on('swiperight', function(){
+		  // 			jQuery(this).carousel('prev'); 
+		  // 		});
 			}
 		},
 		// All pages
