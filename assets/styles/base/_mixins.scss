@@ -19,7 +19,7 @@
     }
 
     @else if $class == lg {
-        @media only screen and (max-width: 1441px) { @content; }
+        @media only screen and (max-width: 1200px) { @content; }
     }
 
     @else {

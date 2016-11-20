@@ -48,6 +48,8 @@
 	max-width: 350px;
 	width: 100%;
 	padding: 45px 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
 	p {
 		font-size: 14px;
 		line-height: calc(24em / 14);
@@ -60,16 +62,16 @@
 		margin: 0 auto;
 	}
 	&--design {
-		background: url('../images/home-cb-1.png') no-repeat;
+		background-image: url('../images/home-cb-1.png');
 		margin-right: 2.5px;
 	}
 	&--story {
-		background: url('../images/home-cb-2.png') no-repeat;
+		background-image: url('../images/home-cb-2.png');
 		margin-left: 2.5px;
 		margin-right: 2.5px;
 	}
 	&--what-do {
-		background: url('../images/home-cb-3.png') no-repeat;
+		background-image: url('../images/home-cb-3.png');
 		margin-left: 2.5px;
 	}
 }

@@ -47,7 +47,7 @@
     width: 37px;
     height: 64px;
     left: 0;
-    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="394 263.003 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M394.636 296.478l29.625 29.883a1.989 1.989 0 0 0 2.925 0l3.178-3.207a2.028 2.028 0 0 0 0-2.95l-24.984-25.203 24.984-25.2a2.028 2.028 0 0 0 0-2.95l-3.178-3.207a1.989 1.989 0 0 0-2.925 0l-29.625 29.884a2.028 2.028 0 0 0 0 2.95z"/></svg>');
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="394 263.003 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M394.636 296.478l29.625 29.883a1.989 1.989 0 0 0 2.925 0l3.178-3.207a2.028 2.028 0 0 0 0-2.95l-24.984-25.203 24.984-25.2a2.028 2.028 0 0 0 0-2.95l-3.178-3.207a1.989 1.989 0 0 0-2.925 0l-29.625 29.884a2.028 2.028 0 0 0 0 2.95z"/></svg>') no-repeat;
 }
 
 .carousel-control .icon-next:before {
@@ -58,7 +58,7 @@
     width: 37px;
     height: 64px;
     right: 0;
-    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="1613.004 263 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M1649.368 293.524l-29.625-29.883a1.989 1.989 0 0 0-2.925 0l-3.178 3.207a2.028 2.028 0 0 0 0 2.95l24.984 25.203-24.984 25.2a2.028 2.028 0 0 0 0 2.95l3.178 3.207a1.989 1.989 0 0 0 2.925 0l29.625-29.884a2.028 2.028 0 0 0 0-2.95z"/></svg>');
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="1613.004 263 37 63.999"><defs><style>.a{fill:#cbcbcb;fill-rule:evenodd}</style></defs><path class="a" d="M1649.368 293.524l-29.625-29.883a1.989 1.989 0 0 0-2.925 0l-3.178 3.207a2.028 2.028 0 0 0 0 2.95l24.984 25.203-24.984 25.2a2.028 2.028 0 0 0 0 2.95l3.178 3.207a1.989 1.989 0 0 0 2.925 0l29.625-29.884a2.028 2.028 0 0 0 0-2.95z"/></svg>') no-repeat;
 }
 
 .carousel-indicators {
@@ -81,6 +81,8 @@
 .carousel-caption {
     padding: 0;
     bottom: 120px;
+    // right: 10%;
+    // left: 10%;
 }
 
 .carousel-caption__title {
@@ -113,6 +115,28 @@
     .btn {
         display: inline-block;
     }
+}
+
+// Optional video CSS
+
+.home-video {
+    position: relative;
+    height: 580px;
+    overflow: hidden;
+}
+
+#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    height: 580px;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
 }
 
 // .banner-wrapper {

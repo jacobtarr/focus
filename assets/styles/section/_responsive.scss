@@ -5,11 +5,69 @@
 /* screen sizes
 /* ----------------------------- */
 
+
 /* -----------------------------
-/* MAX-WIDTH: 1441px
+/* MIN-WITH: 1201px
+/* ----------------------------- */
+
+@media only screen and (min-width: 1201px) {
+
+	.navbar-nav .nav-link {
+		padding: 16px 25px;
+		&:hover, &:focus {
+			color: #fff;
+			background: #808080;
+		}
+	}
+
+}
+
+
+/* -----------------------------
+/* MAX-WIDTH: 1200px
 /* ----------------------------- */
 @include breakpoint(lg) {
+
+	.navbar-nav .nav-link {
+		&:hover, &:focus {
+			color: $f-orange;
+		}
+	}
 	
+	.navbar {
+		margin-right: 0;
+	}
+
+	.navbar-nav .nav-item+.nav-item {
+		margin-left: 25px;
+	}
+
+	.carousel-caption__title {
+		max-width: 100%;
+		display: inline-block;
+		font-size: 42px;
+		padding: 20px 50px;
+		margin: 0 auto 50px;
+	}
+
+	.carousel-caption__desc {
+		display: block;
+		margin: 0 auto 20px;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.carousel-indicators {
+		bottom: 10px;
+	}
+
+	.carousel-caption {
+		bottom: 60px;
+	}
+
+	.company-desc-area {
+		padding: 30px 0;
+	}
 	
 
 }
@@ -19,6 +77,130 @@
 /* ----------------------------- */
 @include breakpoint(md) {
 
+	.site-logo {
+		img {
+			width: 142px;
+		}
+	}
+
+	body {
+		font-size: 16px;
+	}
+
+	.site-header > .is-flex {
+		position: relative;
+	}
+
+	.header-menu__phone {
+		float: left;
+		margin-right: 50px;
+	}
+
+	#header-nav {
+		margin-top: 10px;
+	    background: $f-black-alt;
+	    padding: 0px;
+	    min-width: 200px;
+	}
+
+	.navbar-nav .nav-item+.nav-item {
+		margin-left: 0;
+	}
+
+	.navbar-nav .nav-link {
+		text-align: left;
+		padding: 10px 10px;
+		&:hover, &:focus {
+			color: #fff;
+			background: $f-orange;
+		}
+	}
+
+	.navbar {
+		text-align: right;
+		float: left;
+		position: absolute;
+		padding: 0;
+		right: 0;
+		margin-top: 0;
+	}
+
+	.toggleable-area__content h3 {
+		font-size: 22px;
+	}
+
+	.toggleable-area__content p {
+		font-size: 14px;
+	}
+
+	.navbar-toggler {
+		padding: 0;
+		&[aria-expanded="true"] {
+			.fa {
+				color: $f-orange;
+			}
+		}
+		.fa {
+			font-size: 28px;
+			color: #fff;
+			transition: 0.2s all linear;
+			&:hover, &:focus {
+				color: $f-orange;
+			}
+		}
+	}
+	
+	.features {
+		@include flex-wrap(wrap);
+		margin-top: 11px;
+	}
+
+	.feature {
+		max-width: 100%;
+		background-position: center;
+		padding: 25px;
+		.btn {
+			max-width: 100%;
+		}
+		+ .feature {
+			margin: 10px 0 0 0;
+		}
+	}
+
+	.carousel-control .icon-prev:before {
+		width: 19px;
+    	height: 32px;
+	}
+
+	.carousel-control .icon-next:before {
+		width: 19px;
+    	height: 32px;
+	}
+
+	.carousel-control.left {
+		left: 25px;
+	}
+
+	.carousel-control.right {
+		right: 25px;
+	}
+
+	.callout-top {
+		h1 {
+			font-size: 24px;
+		}
+	}
+
+	.callout-middle {
+		font-size: 14px;
+	}
+
+	.footer-content__col-1 {
+		margin-right: 65px;
+	}
+	.footer-title {
+		font-size: 20px;
+	}
 	
 }
 
@@ -27,8 +209,110 @@
 /* ----------------------------- */
 @include breakpoint(sm) {
 	
-	
-	
+	body {
+		font-size: 14px;
+	}
+
+	.navbar-toggler {
+		margin-top: 5px;
+	}
+
+	.site-header {
+		padding: 0 15px;
+	}
+
+	.carousel-caption__title {
+	    font-size: 24px;
+	    padding: 0;
+	    line-height: 1;
+	    text-transform: uppercase;
+	    border: 0;
+	}
+
+	.home-video {
+		height: 350px;
+	}
+
+	.carousel img {
+		height: 350px !important;
+	}
+
+	.carousel-control.right {
+		right: 10px;
+	}
+
+	.carousel-control.left {
+		left: 10px;
+	}
+
+	.toggleable-area__content h3 {
+		font-size: 20px;
+	}
+
+	.toggleable-area__content {
+		padding: 15px 0px 15px 0px;
+	}
+
+	.callout-top,
+	.callout-middle,
+	.callout-bottom {
+		padding: 20px;
+	}
+
+	.callout-middle > .is-flex {
+		@include flex-wrap(wrap);
+	}
+
+	.callout-middle img {
+		margin: 0 auto 15px;
+	}
+
+	.callout-middle__services h6 {
+		margin-bottom: 10px;
+	}
+
+	.callout-bottom img {
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.callout-bottom > .row > div[class^="col-"] + div[class^="col-"] {
+		margin-top: 15px;
+	}
+
+	.featured-video iframe {
+		height: 315px;
+		width: 100%;
+	}
+
+	.footer-content {
+		@include flex-wrap(wrap);
+		padding: 30px 0;
+	}
+
+	.footer-content__col-1 {
+		margin: 0 auto 15px;
+    	text-align: center;
+    	display: block;
+    	width: 100%;
+	}
+
+	.footer-phone {
+		font-size: 20px;
+	}
+
+	.footer-content__col-2 {
+		margin: auto;
+    	text-align: center;
+		>ul:first-of-type {
+			margin-right: 20px;
+		}
+		.footer-title {
+			font-size: 14px;
+		}
+	}
+
+
 
 }
 
