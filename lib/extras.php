@@ -31,3 +31,11 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+// Adds ability to create ACF option pages
+if( function_exists('acf_add_options_page') ) {
+
+  acf_add_options_page('Header');
+  acf_add_options_page('Footer');
+
+}
