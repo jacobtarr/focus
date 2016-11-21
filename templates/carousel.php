@@ -51,12 +51,24 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div> -->
-	<!-- Optional Video Background -->
-	<div class="home-video">
-		<video poster="" id="bgvid" playsinline autoplay muted loop>
-			<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
-			<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
-		</video>
-	</div>
+	<?php if ( is_home() )  { ?>
+		<!-- Optional Video Background -->
+		<div class="home-video">
+			<div class="carousel-caption">
+				<div class="carousel-caption__title">
+					Design<br>Excellence
+				</div>
+				<div class="carousel-caption__secondary-content">
+					<em class="carousel-caption__desc hidden-sm-down">Let our expert team of architechtural designers turn your great idea into a better reality.</em>
+					<a href="" class="btn btn-focus">Learn More&nbsp;&nbsp;&gt;</a>
+				</div>
+			</div>
+			<video poster="" id="bgvid" playsinline autoplay muted loop>
+				<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
+				<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+			</video>
+		</div>
+	<?php } ?>
+	
 	
 </div><!-- .header-wrapper -->

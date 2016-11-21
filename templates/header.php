@@ -1,9 +1,7 @@
-<?php if ( is_home() )  { ?>
-<?php } ?>
 <div class="header-wrapper">
 	<header class="site-header">
 		<div class="is-flex flex-items-xs-between">
-			<a href="" class="site-logo">
+			<a href="<?php echo get_home_url(); ?>" class="site-logo">
 				<img src="<?php echo get_template_directory_uri() . '/dist/images/site-logo@2x.png' ?>" alt="">
 			</a>
 			<div class="header-menu clearfix">
@@ -13,22 +11,22 @@
 					<div class="collapse navbar-toggleable-md" id="header-nav">
 						<ul class="nav navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
+								<a class="nav-link" href="<?php echo get_home_url(); ?>">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link" href="<?php echo get_home_url() . '/about' ?>">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Industries</a>
+								<a class="nav-link" href="<?php echo get_home_url() . '/industries' ?>">Industries</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Services</a>
+								<a class="nav-link" href="<?php echo get_home_url() . '/services'  ?>">Services</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact Us</a>
+								<a class="nav-link" href="<?php echo get_home_url() . '/contact' ?>">Contact Us</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link" href="<?php echo get_home_url() . '/our-work' ?>">Our Work</a>
 							</li>
 						</ul>
 					</div>
