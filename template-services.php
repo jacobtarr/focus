@@ -18,8 +18,6 @@
 								<strong class="large">Projects large and small,</strong> we recognize that our clients are our foundation. Without you we can’t exist, that’s why we make honesty and integrity more important than our bottom line.
 							</p>
 
-							
-
 						</div>
 					</div>
 				</div>
