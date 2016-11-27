@@ -11,17 +11,53 @@
 
 .gform_button.button {
 	cursor: pointer;
+	@include btn-focus($background: $f-orange, $color: #fff, $padding: 15px 100px);
+	max-width: 100%;
+    width: auto;
+	border: 0;
     &:hover, &:focus {
         color: #fff;
-        background: darken(#535353, 10%);
+        background: darken($f-orange, 10%);
     }
-    @include breakpoint(lg) {
-        padding: 9px 25px;
+}
+
+.gform_fields {
+	@include make-row();
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+}
+
+.gform_wrapper ul li.gfield {
+    clear: inherit !important;
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+    @include make-col(12);
+    margin-bottom: 75px;
+    @include breakpoint(sm) {
+    	@include make-col(24);
+    	margin-bottom: 30px;
+    }
+}
+
+.gform_wrapper ul li.gravity-message {
+	width: 100%;
+	@include make-col(24);
+	margin-bottom: 50px;
+	textarea {
+		height: 100px;
+	}
+	@include breakpoint(sm) {
+    	margin-bottom: 30px;
     }
 }
 
 body .gform_wrapper label.gfield_label+div.ginput_container {
 	margin-top: 0 !important;
+}
+
+.gfield_label {
+	display: none;
 }
 
 .gform_wrapper {
@@ -40,88 +76,104 @@ body .gform_wrapper label.gfield_label+div.ginput_container {
 	}
 }
 
+.ginput_container input,
+.ginput_container textarea {
+	color: $f-black-alt;
+	@include placeholder {
+		color: $f-black-alt;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
 .gform_body {
 	input {
 		width: 100% !important;
-		border: 2px solid #7A7B7B !important;
+		border: 0;
+		color: $f-black-alt;
+		border-bottom: 1px solid $f-black-alt !important;
 		border-radius: 0 !important;
-		font-size: 30px !important;
-		padding: .85rem .75rem !important;
+		font-size: 16px !important;
+		padding: 10px 20px !important;
 		height: auto !important;
 	}
 	textarea {
-		font-size: 30px !important;
+		font-size: 16px !important;
 		width: 100% !important;
-		border: 2px solid #7A7B7B !important;
+		padding: 10px 20px !important;
+		border: 0;
+		border-bottom: 1px solid $f-black-alt !important;
 		border-radius: 0 !important;
-		padding: .85rem .75rem !important;
 	}
 }
 
-
-
-/* -------------------------------------
-/* Regular form styles
-/* ------------------------------------- */
-
-.form-control {
-	border: 2px solid #7A7B7B;
-	border-radius: 0;
-	font-size: 30px;
-	padding: .85rem .75rem;
-	height: auto !important;
+.ginput_container_select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    &::after {
+    	content: '';
+    	position: absolute;
+	    top: 50%;
+    	margin-top: -5px;
+	    right: 15px;
+	    width: 0;
+	    height: 0;
+	    pointer-events: none;
+	    border-width: 10px 7px 0 7px;
+	    border-style: solid;
+	    border-color: $f-black-alt transparent transparent transparent;
+    }
 }
 
-.form-check-label {
-	font-weight: 500;
-    font-size: 30px;
-    color: #000;
+@media (max-width: 480px), (max-device-width: 480px) {
+	body div.gform_wrapper.gf_browser_chrome select {
+		width: 100% !important;
+	}
+}
+
+.ginput_container_select select {
+    width: 100% !important;
+    height: auto !important;
+    transition: all 0.2s linear;
+    font-weight: 700;
+    cursor: pointer;
     text-transform: uppercase;
+    font-size: 16px !important;
+	padding: 10px 20px !important;
+    color: $f-black-alt;
+    border: 0;
+    border-bottom: 1px solid $f-black-alt !important;
+    outline: 0;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
 }
 
-.form-check {
-	margin-bottom: 40px;
+.ginput_container_select select::-ms-expand {
+    display: none;
 }
 
-.form-check-input {
-	margin-right: 25px;
+.ginput_container_select select:hover,
+.ginput_container_select select:focus {
+    color: #000;
+    background: #ccc;
 }
 
-.form-group {
-	margin-bottom: 40px !important;
-	&.secondary {
-		margin-bottom: 30px !important;
-	}
-	&.tertiary {
-		margin-bottom: 25px !important;
-	}
+.ginput_container_select select:disabled {
+    pointer-events: none;
+    opacity: .5;
 }
 
-.form-group label {
-	font-size: 30px;
-	font-weight: 500;
-	color: #000;
-	margin-bottom: 15px;
+div.gform_wrapper div.charleft {
+	font-size: 16px !important;
 	text-transform: uppercase;
+	font-weight: 700;
+	text-align: right;
+	color: #A7A7A7 !important;
+	width: 100% !important;
 }
-
-.form-close {
-	position: absolute;
-	top: 32px;
-	right: 32px;
-	img {
-		vertical-align: top;
-		width: 40px;
-		height: 40px;
-	}
-	&[aria-expanded="false"] {
-		@include sr-only();
-	}
-}
-
-/* -------------------------------------
-/* Contact Form specific styles (appears 
-/* everywhere)
-/* ------------------------------------- */
 
 

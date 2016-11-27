@@ -86,3 +86,72 @@
 		}
 	}
 }
+
+.page-mini-section {
+	margin-bottom: 60px;
+	h3 {
+		margin-bottom: 20px;
+		font-size: 32px;
+	}
+	&.form {
+		h3 {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+/* -----------------------------
+/* Services/Features
+/* ----------------------------- */
+
+.services {
+	+ .services {
+		margin-top: 50px;
+	}
+}
+
+.service {
+	text-align: center;
+	img {
+		width: 168px;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 20px;
+		line-height: calc(27em / 20);
+		margin: 0;
+	}
+}
+
+.service-title {
+	font-size: 32px;
+	margin-bottom: 25px;
+}
+
+.phase-list {
+	padding-left: 120px;
+	span {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $f-orange;
+	}
+}
+
+/* -----------------------------
+/* People
+/* ----------------------------- */
+
+.people > .person + .person {
+	margin-top: 100px;
+}
+
+.person img {
+	width: 100%;
+}
+
+.people ul {
+	color: $f-orange;
+	font-weight: 700;
+}
+
+
