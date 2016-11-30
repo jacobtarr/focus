@@ -7,7 +7,7 @@
 //
 @mixin breakpoint($class) {
     @if $class == xs {
-        @media only screen and (max-width: 414px) { @content; }
+        @media only screen and (max-width: 543px) { @content; }
     }
 
     @else if $class == sm {

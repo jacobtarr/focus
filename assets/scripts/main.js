@@ -42,6 +42,87 @@
 			            }
 			        });
 		        }
+
+		        $('.work-section .nav-link').click(function (e) {
+				    var tab = $(this);
+				    if(tab.hasClass('active')){
+				        window.setTimeout(function(){
+				            $(".tab-pane").removeClass('active in');
+				            tab.removeClass('active');
+				            $('.nav-link').removeClass('active')
+				        },1);
+				    }
+				});
+
+				$('#bxslider1').bxSlider({
+					pagerCustom: '#bx-pager1'
+				});
+
+				$('a[href="#workItem2"]').on('shown.bs.tab', function (e) {
+					$('#bxslider2').bxSlider({
+						pagerCustom: '#bx-pager2'
+					});
+				});
+
+				$('a[href="#workItem3"]').on('shown.bs.tab', function (e) {
+					$('#bxslider3').bxSlider({
+						pagerCustom: '#bx-pager3'
+					});
+				});
+
+				$('a[href="#workItem4"]').on('shown.bs.tab', function (e) {
+					$('#bxslider4').bxSlider({
+						pagerCustom: '#bx-pager4'
+					});
+				});
+
+				$('a[href="#workItem5"]').on('shown.bs.tab', function (e) {
+					$('#bxslider5').bxSlider({
+						pagerCustom: '#bx-pager5'
+					});
+				});
+
+				$('a[href="#workItem6"]').on('shown.bs.tab', function (e) {
+					$('#bxslider6').bxSlider({
+						pagerCustom: '#bx-pager6'
+					});
+				});
+
+				$('a[href="#workItem7"]').on('shown.bs.tab', function (e) {
+					$('#bxslider7').bxSlider({
+						pagerCustom: '#bx-pager7'
+					});
+				});
+
+				$('a[href="#workItem8"]').on('shown.bs.tab', function (e) {
+					$('#bxslider8').bxSlider({
+						pagerCustom: '#bx-pager8'
+					});
+				});
+
+				$('a[href="#workItem9"]').on('shown.bs.tab', function (e) {
+					$('#bxslider9').bxSlider({
+						pagerCustom: '#bx-pager9'
+					});
+				});
+
+				$('a[href="#workItem10"]').on('shown.bs.tab', function (e) {
+					$('#bxslider10').bxSlider({
+						pagerCustom: '#bx-pager10'
+					});
+				});
+
+				$('a[href="#workItem11"]').on('shown.bs.tab', function (e) {
+					$('#bxslider11').bxSlider({
+						pagerCustom: '#bx-pager11'
+					});
+				});
+
+				$('a[href="#workItem12"]').on('shown.bs.tab', function (e) {
+					$('#bxslider12').bxSlider({
+						pagerCustom: '#bx-pager12'
+					});
+				});
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired
@@ -49,7 +130,7 @@
 		},
 		'foobar': {
 			init: function() {
-				console.log('hello');
+				// console.log('hello');
 			}
 		},
 		// Home page
