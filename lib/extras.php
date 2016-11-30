@@ -36,6 +36,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 if( function_exists('acf_add_options_page') ) {
 
   acf_add_options_page('Header');
+  acf_add_options_page('Home');
   acf_add_options_page('Footer');
 
 }

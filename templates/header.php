@@ -1,7 +1,7 @@
 <?php
 
     // ACF Variables
-    $nav_menu_item = get_field( 'nav_menu_item' );
+    
 ?>
 
 <div class="header-wrapper">
@@ -15,53 +15,26 @@
 				<nav class="navbar">
 					<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#header-nav" aria-controls="header-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
 					<div class="collapse navbar-toggleable-md" id="header-nav">
-						<ul class="nav navbar-nav">
-							<!-- <?php
+						<?php if( have_rows('nav_menu_item', 'option') ): ?>
+							<ul class="nav navbar-nav">
+                                <?php // loop through the rows of data
+                                while ( have_rows('nav_menu_item', 'option') ) : the_row(); ?>
 
-	                            if( have_rows('nav_menu_item') ):
-
-	                                // loop through the rows of data
-	                                while ( have_rows('nav_menu_item') ) : the_row();
-
-	                                    // vars
+                                    <?php // vars
 
 	                            		$name = get_sub_field( 'nav_menu_item_name' );
 										$link = get_sub_field( 'nav_menu_item_link' );
 
-	                                    ?>
+                                    ?>
 
-	                                    <li class="nav-item">
-											<a class="nav-link" href="<?php echo $link; ?>"><?php echo $name; ?></a>
-										</li>
-										
-	                                <?php endwhile;
+                                    <li class="nav-item">
+										<a class="nav-link" href="<?php echo $link; ?>"><?php echo $name; ?></a>
+									</li>
+									
+                                <?php endwhile; ?>
+                            </ul>
 
-	                            else : ?>
-
-	                                <?php // no rows found
-
-	                            endif;
-
-                            ?> -->
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url(); ?>">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url() . '/about' ?>">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url() . '/industries' ?>">Industries</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url() . '/services'  ?>">Services</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url() . '/contact' ?>">Contact Us</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_home_url() . '/our-work' ?>">Our Work</a>
-							</li>
-						</ul>
+                        <?php endif; ?>
 					</div>
 				</nav>
 			</div>
